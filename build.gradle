@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.sabamiso'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-core', version: '2.9.1'
+    implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-spring', version: '2.9.1'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '2.5.2'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
