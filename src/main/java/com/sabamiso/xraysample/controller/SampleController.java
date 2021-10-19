@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SampleController {
     @GetMapping
-    public ResponseEntity<String> index(){
+    public ResponseEntity<String> index() throws InterruptedException {
+        wait(3000);
         return ResponseEntity.ok("OK");
     }
 }
