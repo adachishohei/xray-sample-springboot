@@ -14,7 +14,8 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-//    implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-core', version: '2.9.1'
+    implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-core', version: '2.9.1'
+    implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-metrics', version: '2.9.1'
     implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-spring', version: '2.9.1'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '2.5.2'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
